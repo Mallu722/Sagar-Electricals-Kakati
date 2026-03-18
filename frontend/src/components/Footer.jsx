@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Zap } from 'lucide-react';
 
 const Footer = () => {
@@ -22,11 +23,11 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold text-sagar-yellow">Our Services</h3>
             <ul className="text-gray-400 space-y-2 text-sm">
-              <li>Transformer Repair & Services</li>
-              <li>High Voltage Cable Testing</li>
-              <li>Industrial Oil Filtration</li>
-              <li>House Wiring & Installation</li>
-              <li>Emergency Electrical Repair</li>
+              <li><Link to="/services/transformer-repair" className="hover:text-white transition-colors">Transformer Repair & Services</Link></li>
+              <li><Link to="/services/high-voltage-cable-testing" className="hover:text-white transition-colors">High Voltage Cable Testing</Link></li>
+              <li><Link to="/services/oil-filtration" className="hover:text-white transition-colors">Industrial Oil Filtration</Link></li>
+              <li><Link to="/services/distribution-transformer" className="hover:text-white transition-colors">Distribution Transformer Repair</Link></li>
+              <li><Link to="/services/electrical-maintenance" className="hover:text-white transition-colors">Electrical Maintenance</Link></li>
             </ul>
           </div>
 

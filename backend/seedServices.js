@@ -3,31 +3,6 @@ const mongoose = require('mongoose');
 const Service = require('./models/Service');
 
 const services = [
-  // Residential
-  {
-    title: 'House Wiring & Installation',
-    description: 'Safe and compliant residential wiring services for new homes and renovations across Karnataka.',
-    iconName: 'Home',
-    category: 'Residential'
-  },
-  {
-    title: 'Fan & Light Installation',
-    description: 'Ceiling fans, chandeliers, recessed lighting, and outdoor landscape lighting installations.',
-    iconName: 'Fan',
-    category: 'Residential'
-  },
-  {
-    title: 'Switchboard Repair',
-    description: 'Troubleshooting and fixing sparking outlets, old switchboards, and failing switches.',
-    iconName: 'Box',
-    category: 'Residential'
-  },
-  {
-    title: 'Emergency Electrical Repair',
-    description: '24/7 emergency dispatch for power outages, electrical fires, and hazard mitigations.',
-    iconName: 'ShieldAlert',
-    category: 'Residential'
-  },
   // Transformer
   {
     title: 'Transformer Repair & Services',
