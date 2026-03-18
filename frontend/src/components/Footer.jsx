@@ -20,12 +20,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-bold text-sagar-yellow">Emergency Services</h3>
+            <h3 className="text-lg font-bold text-sagar-yellow">Our Services</h3>
             <ul className="text-gray-400 space-y-2 text-sm">
-              <li>House Wiring</li>
-              <li>Switchboard Repair</li>
-              <li>Fan & Light Installation</li>
-              <li>Circuit Breaker replacement</li>
+              <li>Transformer Repair & Services</li>
+              <li>High Voltage Cable Testing</li>
+              <li>Industrial Oil Filtration</li>
+              <li>House Wiring & Installation</li>
+              <li>Emergency Electrical Repair</li>
             </ul>
           </div>
 
