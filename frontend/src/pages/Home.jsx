@@ -5,61 +5,63 @@ const Home = () => {
   return (
     <div id="home" className="flex flex-col">
 
-      {/* Hero Section */}
-      <section className="relative bg-sagar-blue text-white py-28 lg:py-40 overflow-hidden">
+      {/* Hero — full-bleed, FoGo-style layout */}
+      <section className="relative w-full h-screen min-h-[600px] overflow-hidden text-white">
+
+        {/* Background image — full bleed */}
         <div
-          className="absolute inset-0 z-0 opacity-25"
-          style={{ backgroundImage: `url('/hero-bg.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        ></div>
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sagar-blue via-sagar-blue/90 to-blue-900 z-0"></div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sagar-yellow opacity-5 rounded-full filter blur-[120px] z-0"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500 opacity-10 rounded-full filter blur-[100px] z-0"></div>
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('/hero-bg.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sagar-yellow/20 text-sagar-yellow mb-6 border border-sagar-yellow/40 text-sm font-semibold">
-              <Zap className="h-4 w-4" fill="currentColor" /> Trusted Electrical Experts in Belagavi
+        {/* Dark scrim — stronger at bottom for text legibility */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 via-black/20 to-black/75" />
+
+        {/* Bottom content row — title left, description right (like FoGo) */}
+        <div className="absolute bottom-0 left-0 right-0 z-20 px-6 sm:px-10 lg:px-16 pb-12 lg:pb-16">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+            {/* Big headline — bottom left */}
+            <div className="lg:max-w-[55%]">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.0] tracking-tight">
+                Industrial &amp;<br />
+                Residential<br />
+                <span className="text-sagar-yellow">Electrical Services</span>
+              </h1>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.05]">
-              Industrial &amp; <br />
-              <span className="text-sagar-yellow">Residential</span><br />
-              Electrical Services
-            </h1>
-
-            <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl leading-relaxed">
-              From transformer repair and high-voltage cable testing to home wiring — Sagar Electricals delivers certified, safe, and prompt solutions 24/7.
-            </p>
-
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              {['5.0 ⭐ Rated', '24/7 Emergency', 'Certified Engineers', 'Pan-Karnataka Service'].map(badge => (
-                <span key={badge} className="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-gray-200">
-                  {badge}
-                </span>
-              ))}
+            {/* Description + CTA — bottom right */}
+            <div className="lg:max-w-[38%] space-y-5">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                From transformer repair and high-voltage cable testing to home wiring —
+                Sagar Electricals delivers certified, safe, and prompt solutions.{' '}
+                <span className="font-bold text-white">Available 24/7 across Karnataka.</span>
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="#request-service"
+                  className="px-6 py-2.5 bg-sagar-yellow text-sagar-blue font-bold rounded-full text-sm hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl">
+                  Request Service
+                </a>
+                <a href="tel:+919448305184"
+                  className="px-6 py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-bold rounded-full text-sm hover:bg-white/25 transition-all">
+                  📞 +91 94483 05184
+                </a>
+              </div>
+              {/* Trust pills */}
+              <div className="flex flex-wrap gap-2">
+                {['5.0 ⭐ Rated', '24/7 Emergency', 'Certified Engineers'].map(b => (
+                  <span key={b} className="px-3 py-1 bg-black/30 backdrop-blur-sm border border-white/15 rounded-full text-xs font-medium text-gray-300">
+                    {b}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#request-service" className="px-8 py-4 bg-sagar-yellow text-sagar-blue hover:bg-yellow-400 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-center">
-                Request Service
-              </a>
-              <a href="tel:+919448305184" className="px-8 py-4 border-2 border-white/40 hover:border-sagar-yellow hover:text-sagar-yellow text-white text-lg font-bold rounded-xl transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
-                📞 +91 94483 05184
-              </a>
-            </div>
           </div>
-        </div>
-
-        {/* Floating stats */}
-        <div className="absolute bottom-8 right-8 hidden lg:flex gap-4 z-10">
-          {[{ val: '500+', label: 'Projects Done' }, { val: '10+', label: 'Years Experience' }, { val: '5.0★', label: 'Google Rating' }].map(stat => (
-            <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-3 text-center">
-              <div className="text-2xl font-extrabold text-sagar-yellow">{stat.val}</div>
-              <div className="text-xs text-gray-300 font-medium">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </section>
 
