@@ -76,19 +76,21 @@ const Navbar = () => {
       {isOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
-          <div className="absolute top-0 left-0 right-0 bg-sagar-blue pt-20 pb-6 px-4 shadow-2xl rounded-b-3xl">
-            {navLinks.map(link => (
-              <Link key={link.path} to={link.path}
-                className={`block px-4 py-3 rounded-xl text-base font-medium mb-1 ${
-                  isActive(link.path) ? 'bg-white/10 text-sagar-yellow' : 'text-gray-300 hover:bg-white/5 hover:text-white'
-                }`}>
-                {link.name}
+          <div className="absolute top-0 left-0 right-0 bg-sagar-blue/95 backdrop-blur-xl pt-24 pb-10 px-6 shadow-2xl rounded-b-[2.5rem] border-b border-white/10">
+            <div className="flex flex-col gap-2">
+              {navLinks.map(link => (
+                <Link key={link.path} to={link.path}
+                  className={`block px-5 py-4 rounded-2xl text-lg font-bold transition-all ${
+                    isActive(link.path) ? 'bg-white/10 text-sagar-yellow shadow-inner' : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                  }`}>
+                  {link.name}
+                </Link>
+              ))}
+              <Link to="/request"
+                className="block text-center mt-6 bg-sagar-yellow text-sagar-blue px-6 py-4 rounded-2xl font-black text-lg hover:bg-yellow-400 transition-all shadow-lg active:scale-95">
+                Request Service
               </Link>
-            ))}
-            <Link to="/request"
-              className="block text-center mt-3 bg-sagar-yellow text-sagar-blue px-4 py-3 rounded-xl font-bold text-base hover:bg-yellow-400 transition-colors">
-              Request Service
-            </Link>
+            </div>
           </div>
         </div>
       )}

@@ -28,7 +28,7 @@ const Home = () => {
 
             {/* Big headline — bottom left */}
             <div className="lg:max-w-[55%]">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.0] tracking-tight">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] sm:leading-[1.0] tracking-tight">
                 Industrial<br />
                 <span className="text-sagar-yellow">Transformer</span><br />
                 Electrical Services
@@ -42,13 +42,13 @@ const Home = () => {
                 Sagar Electricals delivers certified, safe solutions for power infrastructure.{' '}
                 <span className="font-bold text-white">Available 24/7 across Karnataka.</span>
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Link to="/request"
-                  className="px-6 py-2.5 bg-sagar-yellow text-sagar-blue font-bold rounded-full text-sm hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl">
+                  className="px-6 py-3 bg-sagar-yellow text-sagar-blue font-bold rounded-full text-sm hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl text-center">
                   Request Service
                 </Link>
                 <a href="tel:+919448305184"
-                  className="px-6 py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-bold rounded-full text-sm hover:bg-white/25 transition-all">
+                  className="px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/20 transition-all text-center">
                   📞 +91 94483 05184
                 </a>
               </div>

@@ -200,14 +200,14 @@ export default function Dashboard() {
       <main className="flex-1 min-w-0 overflow-hidden">
         
         {/* Header */}
-        <header className="bg-white/70 backdrop-blur-md border-b border-gray-100 sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="md:hidden p-2 hover:bg-gray-100 rounded-lg">
-              {sidebarOpen ? <X /> : <Menu />}
+        <header className="bg-white/70 backdrop-blur-md border-b border-gray-100 sticky top-0 z-40 px-4 sm:px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors">
+              {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
             <div>
-              <h2 className="text-xl font-black text-[#0D1B2A] tracking-tight">Admin Overview</h2>
-              <p className="text-xs text-gray-500 font-bold uppercase tracking-widest hidden sm:block">Command Center</p>
+              <h2 className="text-lg sm:text-xl font-black text-[#0D1B2A] tracking-tight">Admin <span className="text-sagar-yellow">Overview</span></h2>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest hidden sm:block">Command Center</p>
             </div>
           </div>
           
