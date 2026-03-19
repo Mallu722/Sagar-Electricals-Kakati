@@ -16,6 +16,7 @@ const createTransporter = () => nodemailer.createTransport({
 router.post('/', async (req, res) => {
   try {
     const { name, phone, address, serviceType, description, preferredTime } = req.body;
+    console.log(`[POST] New service request from: ${name} (${phone})`);
 
     // Validate required fields
     if (!name || !phone || !address || !serviceType || !description || !preferredTime) {
@@ -95,7 +96,9 @@ router.post('/', async (req, res) => {
 // GET /api/service-request — all requests (dashboard)
 router.get('/', async (req, res) => {
   try {
+    console.log('[GET] Fetching all service requests');
     const requests = await ServiceRequest.find().sort({ createdAt: -1 });
+    console.log(`Found ${requests.length} requests`);
     res.status(200).json(requests);
   } catch (error) {
     res.status(500).json({ message: 'Internal server error', error: error.message });

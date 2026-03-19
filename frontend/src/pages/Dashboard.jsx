@@ -19,7 +19,7 @@ const statusConfig = {
 };
 
 export default function Dashboard() {
-  const [authed, setAuthed]     = useState(false);
+  const [authed, setAuthed]     = useState(() => localStorage.getItem('sagar_admin_auth') === 'true');
   const [pin, setPin]           = useState('');
   const [pinError, setPinError] = useState('');
   const [requests, setRequests] = useState([]);
@@ -35,10 +35,12 @@ export default function Dashboard() {
     setLoading(true);
     setFetchError('');
     try {
+      console.log(`Fetching requests from: ${API_URL}/service-request`);
       const { data } = await axios.get(`${API_URL}/service-request`);
       setRequests(Array.isArray(data) ? data : []);
     } catch (err) {
-      setFetchError('Could not load requests. Is the backend running?');
+      const errorMsg = err.response?.data?.message || err.message;
+      setFetchError(`Could not load requests: ${errorMsg}`);
       console.error('Dashboard fetch error:', err);
     } finally {
       setLoading(false);
@@ -53,10 +55,16 @@ export default function Dashboard() {
     e.preventDefault();
     if (pin === DASHBOARD_PIN) {
       setAuthed(true);
+      localStorage.setItem('sagar_admin_auth', 'true');
       setPinError('');
     } else {
       setPinError('Incorrect PIN. Try again.');
     }
+  };
+
+  const handleSignOut = () => {
+    setAuthed(false);
+    localStorage.removeItem('sagar_admin_auth');
   };
 
   const updateStatus = async (id, status) => {
@@ -179,7 +187,7 @@ export default function Dashboard() {
 
           <div className="mt-auto pt-8">
             <button 
-              onClick={() => setAuthed(false)}
+              onClick={handleSignOut}
               className="w-full flex items-center gap-3 px-4 py-4 rounded-2xl text-rose-400 hover:bg-rose-500/10 transition-all font-bold text-sm bg-rose-500/5 group"
             >
               <LogOut className="h-5 w-5 group-hover:-translate-x-1 transition-transform" /> Sign Out

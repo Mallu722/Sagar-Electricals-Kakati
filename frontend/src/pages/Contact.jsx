@@ -41,9 +41,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-sagar-blue text-lg mb-1 group-hover:text-sagar-yellow transition-colors">Phone Numbers</h3>
                 <p className="text-gray-600 text-sm flex flex-col gap-1">
+                  <span className="font-bold text-sagar-blue">+91 94483 05184</span>
                   <span>+91 97392 84211</span>
                   <span>+91 78297 59202</span>
-                  <span>+91 94483 05184</span>
                 </p>
                 <p className="text-gray-400 text-xs mt-1">Available 24/7 for emergencies</p>
               </div>

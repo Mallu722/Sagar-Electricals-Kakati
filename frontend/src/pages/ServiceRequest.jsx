@@ -39,6 +39,7 @@ const ServiceRequest = () => {
     setError('');
 
     try {
+      console.log(`Submitting service request to: ${API_URL}/service-request`);
       const res = await axios.post(`${API_URL}/service-request`, {
         name: formData.name.trim(),
         phone: formData.phone.trim(),
@@ -50,9 +51,11 @@ const ServiceRequest = () => {
 
       if (res.status === 201 || res.status === 200) {
         setSubmitted(true);
+        console.log('Submission successful');
         setFormData({ name: '', phone: '', address: '', serviceType: '', description: '', preferredTime: '' });
       }
     } catch (err) {
+      console.error('Submission error:', err);
       const msg = err?.response?.data?.message || err?.response?.data?.error || '';
       setError(msg || 'Failed to submit. Please try again or call us directly at +91 94483 05184.');
     } finally {
