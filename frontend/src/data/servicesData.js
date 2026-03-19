@@ -6,7 +6,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Expert repair and maintenance for all types of electrical transformers.',
     description: 'We provide comprehensive repair, rewinding, and overhaul services for all transformer types. Our certified engineers diagnose faults, replace damaged windings, restore insulation, and return your transformer to peak performance — minimizing downtime for your facility.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80',
+    image: '/assets/sagar_transformer_windings.jpg',
     iconName: 'Wrench',
     pricing: [
       { work: 'General Inspection & Assessment', price: '₹1,500 – ₹3,000' },
@@ -22,7 +22,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Specialized servicing for high-capacity power transformers.',
     description: 'High-capacity power transformers demand precision. Our team handles core and winding repairs, oil replacement, cooling system restoration, and full refurbishment for industrial and utility-grade power transformers across Karnataka.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: '/assets/sagar_crane_maintenance.jpg',
     iconName: 'Zap',
     pricing: [
       { work: 'Diagnostic Testing', price: '₹3,000 – ₹6,000' },
@@ -38,7 +38,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Maintenance and repair of water-cooled transformer systems.',
     description: 'Water-cooled transformers require specialized care. We inspect cooling circuits, detect and seal leaks, clean heat exchangers, and perform full cooling system overhauls to ensure thermal efficiency and electrical integrity.',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80',
+    image: '/assets/services/transformer_repair_indian.png',
     iconName: 'Settings',
     pricing: [
       { work: 'Cooling Circuit Inspection', price: '₹2,000 – ₹4,000' },
@@ -53,7 +53,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Reliable repair for Completely Self-Protected (CSP) transformers.',
     description: 'CSP transformers protect distribution networks with built-in fuses and surge arresters. We inspect, test, and replace protective devices, and perform full overhauls to keep your CSP units operating safely and reliably.',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80',
+    image: '/assets/services/distribution_maintenance_indian.png',
     iconName: 'Box',
     pricing: [
       { work: 'Fuse & Arrester Inspection', price: '₹1,500 – ₹3,500' },
@@ -67,7 +67,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Specialized repair of On-Load Tap Changer (OLTC) transformers.',
     description: 'On-Load Tap Changers regulate voltage without interrupting supply. Our engineers inspect OLTC mechanisms, replace worn contacts, service oil compartments, and perform full overhauls to ensure uninterrupted voltage regulation.',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80',
+    image: '/assets/services/transformer_repair_indian.png',
     iconName: 'Settings',
     pricing: [
       { work: 'OLTC Mechanism Inspection', price: '₹3,000 – ₹6,000' },
@@ -82,7 +82,7 @@ export const servicesData = [
     category: 'Transformer',
     tagline: 'Repair and overhaul of distribution transformers for reliable power delivery.',
     description: 'Distribution transformers are the backbone of power delivery to homes and businesses. We provide routine maintenance, winding repairs, oil testing and replacement, and full overhauls to maintain consistent, safe power distribution.',
-    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80',
+    image: '/assets/services/distribution_maintenance_indian.png',
     iconName: 'Zap',
     pricing: [
       { work: 'Routine Maintenance', price: '₹2,000 – ₹5,000' },
@@ -97,7 +97,7 @@ export const servicesData = [
     category: 'Testing',
     tagline: 'Comprehensive testing of transformer cables to detect faults and ensure reliability.',
     description: 'Cable faults can cause catastrophic transformer failures. We perform insulation resistance tests, hi-pot dielectric tests, and cable fault location to detect insulation breakdown and ensure your transformer cables are safe and reliable.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+    image: '/assets/services/hv_testing_indian.png',
     iconName: 'ShieldAlert',
     pricing: [
       { work: 'Insulation Resistance Test', price: '₹1,500 – ₹3,000' },
@@ -112,7 +112,7 @@ export const servicesData = [
     category: 'Testing',
     tagline: 'Advanced testing for high voltage cables ensuring safety and compliance.',
     description: 'High voltage cables require rigorous testing to prevent electrical hazards. We conduct HV insulation resistance tests, AC/DC hi-pot testing, and partial discharge analysis to identify weaknesses before they cause failures — keeping your infrastructure safe and compliant.',
-    image: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80',
+    image: '/assets/sagar_test_bench.jpg',
     iconName: 'Zap',
     pricing: [
       { work: 'HV Insulation Resistance Test', price: '₹2,000 – ₹4,500' },
@@ -127,7 +127,7 @@ export const servicesData = [
     category: 'Industrial',
     tagline: 'High-quality oil filtration to remove contaminants and extend transformer life.',
     description: 'Contaminated transformer oil degrades insulation and causes failures. Our industrial oil filtration service removes moisture, particulates, and dissolved gases using advanced filtration and dehydration equipment — restoring oil to its original dielectric properties.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80',
+    image: '/assets/sagar_transformer_oven.jpg',
     iconName: 'Fan',
     pricing: [
       { work: 'Transformer Oil Filtration (up to 1000L)', price: '₹4,000 – ₹8,000' },
@@ -142,8 +142,9 @@ export const servicesData = [
     category: 'Industrial',
     tagline: 'Routine maintenance and AMC for commercial and industrial electrical systems.',
     description: 'Preventive maintenance is the most cost-effective way to avoid electrical failures. We offer routine inspection visits, panel and switchgear maintenance, Annual Maintenance Contracts (AMC), and 24/7 emergency call-outs for industrial and commercial facilities.',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80',
+    image: '/assets/services/electrical_maintenance_indian.png',
     iconName: 'Wrench',
+
     pricing: [
       { work: 'Routine Inspection Visit', price: '₹1,000 – ₹2,500' },
       { work: 'Panel & Switchgear Maintenance', price: '₹3,000 – ₹8,000' },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, ShieldCheck, Clock, CheckCircle, Wrench, Settings, Activity, Shield, ThumbsUp, Star, Quote } from 'lucide-react';
+import { ShieldCheck, Zap, Wrench, CheckCircle, Smartphone, MapPin, ExternalLink, FileText, Download, Activity, Clock, Settings, Shield, ThumbsUp, Star, Quote } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -157,28 +157,129 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-sagar-blue rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden h-[460px] flex flex-col justify-end">
+          <div className="bg-sagar-blue rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden h-[540px] flex flex-col justify-between">
             <div className="absolute top-0 right-0 p-6 opacity-10"><Zap className="w-56 h-56 text-sagar-yellow" /></div>
-            <div className="absolute top-8 left-8 right-8">
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { label: 'Transformer Repairs', val: '200+' },
-                  { label: 'HV Cable Tests', val: '150+' },
-                  { label: 'Homes Wired', val: '300+' },
-                  { label: 'Years Active', val: '10+' },
-                ].map(stat => (
-                  <div key={stat.label} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-extrabold text-sagar-yellow">{stat.val}</div>
-                    <div className="text-xs text-gray-300 mt-1">{stat.label}</div>
-                  </div>
-                ))}
+            
+            {/* Stats Grid */}
+            <div className="relative z-10 grid grid-cols-2 gap-3">
+              {[
+                { label: 'Transformer Repairs', val: '200+' },
+                { label: 'HV Cable Tests', val: '150+' },
+                { label: 'Homes Wired', val: '300+' },
+                { label: 'Years Active', val: '10+' },
+              ].map(stat => (
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-extrabold text-sagar-yellow">{stat.val}</div>
+                  <div className="text-xs text-gray-300 mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Certification Badge Mini */}
+            <div className="relative z-10 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 flex items-center gap-4">
+              <div className="w-16 h-16 bg-white rounded-lg p-1 shrink-0 overflow-hidden">
+                <img src="/assets/iso_certification.png" alt="ISO Logo" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <p className="text-sagar-yellow font-bold text-sm">ISO 9001:2015 Certified</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-xs text-gray-300 uppercase tracking-wider font-semibold">Quality Management System</p>
+                  <a href="/assets/iso_certification_official.pdf" target="_blank" rel="noopener noreferrer" className="p-1 hover:text-sagar-yellow transition-colors" title="View PDF">
+                    <FileText className="h-3 w-3" />
+                  </a>
+                </div>
               </div>
             </div>
+
+            {/* Testimonial */}
             <div className="relative z-10 bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20">
               <div className="flex gap-1 text-sagar-yellow mb-2">⭐ ⭐ ⭐ ⭐ ⭐</div>
-              <p className="text-base font-medium italic mb-3">"Sagar Electricals handled our industrial transformer repair with exceptional professionalism."</p>
+              <p className="text-base font-medium italic mb-3 text-gray-100">"Sagar Electricals handled our industrial transformer repair with exceptional professionalism."</p>
               <p className="font-bold text-sm text-gray-300">– Mallikarjun Hiremath</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Certification Text */}
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-amber-100">
+                <ShieldCheck className="h-4 w-4" /> Quality Assured
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-sagar-blue mb-6">
+                ISO 9001:2015 <span className="text-sagar-yellow">Certified</span> & Govt. Class-I Contractor
+              </h2>
+              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
+                <strong>M/s Sagar Electricals</strong> is a Government Class-I Electrical Contractor, officially certified by <strong>Optimum Certifications Inc.</strong> for meeting the stringent requirements of the <strong>ISO 9001:2015</strong> Quality Management System.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="bg-gray-50 border-l-4 border-sagar-yellow p-6 rounded-r-2xl">
+                  <h4 className="font-bold text-sagar-blue mb-2 uppercase text-sm tracking-widest">Scope of Activities</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed italic">
+                    "Processing, manufacturing, service and supply transformers repair, oil filtration, dehydration, testing servicing, supply & calibration of sub station power equipments (Air Circuit Breaks, Cabs, Relays & Earthpits)"
+                  </p>
+                </div>
+                
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="p-4 bg-sagar-light rounded-xl border border-gray-100">
+                    <p className="text-xs text-gray-400 font-bold uppercase mb-1">Certificate Number</p>
+                    <p className="font-bold text-sagar-blue">Q-0303263405</p>
+                  </div>
+                  <div className="p-4 bg-sagar-light rounded-xl border border-gray-100">
+                    <p className="text-xs text-gray-400 font-bold uppercase mb-1">Verify At</p>
+                    <a href="https://www.ocicert.in" target="_blank" rel="noopener noreferrer" className="font-bold text-sagar-blue hover:text-sagar-yellow transition-colors underline">www.ocicert.in</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-10 p-6 bg-sagar-blue rounded-2xl text-white shadow-xl flex flex-col sm:flex-row items-center gap-6">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20">
+                  <ShieldCheck className="h-10 w-10 text-sagar-yellow" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-lg mb-1">Government Class-I Electrical Contractor</h4>
+                  <p className="text-gray-300 text-sm mb-4">Registered Office: 1305, Kakati, Belagavi, Karnataka-591113. We maintain the highest standards for critical electrical infrastructure.</p>
+                  <a 
+                    href="/assets/iso_certification_official.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-bold transition-all border border-white/10"
+                  >
+                    <Download className="h-4 w-4 text-sagar-yellow" /> Download Official PDF Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Certification Image Container */}
+            <div className="order-1 lg:order-2 relative">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-sagar-yellow/20 to-transparent rounded-[2.5rem] blur-2xl" />
+              <div className="relative bg-white rounded-[2rem] shadow-2xl border-8 border-gray-50 overflow-hidden transform hover:scale-[1.02] transition-transform duration-500 group">
+                {/* Real Certificate Image Link */}
+                <img 
+                  src="/assets/iso_certification.png" 
+                  alt="ISO 9001:2015 Certification - Sagar Electricals" 
+                  className="w-full h-auto"
+                />
+                
+                {/* Hover overlay hint */}
+                <div className="absolute inset-0 bg-sagar-blue/0 group-hover:bg-sagar-blue/5 transition-colors duration-500" />
+                
+                {/* Official Stamp Decoration */}
+                <div className="absolute bottom-10 right-10 w-24 h-24 opacity-80 pointer-events-none transform -rotate-12 group-hover:rotate-0 transition-transform duration-700">
+                  <div className="w-full h-full border-4 border-red-600 rounded-full flex items-center justify-center text-center p-2">
+                    <span className="text-[10px] font-black text-red-600 leading-tight uppercase tracking-tighter">Certified<br/>ISO 9001:2015<br/>Quality System</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -214,19 +315,19 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { title: 'Safety First',     desc: 'Adhering to strict safety codes.',  icon: <Shield className="h-8 w-8 text-sagar-yellow" /> },
-                  { title: 'Fast Response',    desc: 'No delays. We arrive on time.',      icon: <Clock className="h-8 w-8 text-sagar-yellow" /> },
-                  { title: 'Experienced',      desc: 'Master electricians.',               icon: <ThumbsUp className="h-8 w-8 text-sagar-yellow" /> },
-                  { title: '100% Guaranteed',  desc: 'We guarantee our labor.',            icon: <CheckCircle className="h-8 w-8 text-sagar-yellow" /> },
-                ].map((f, i) => (
-                  <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-50 text-center hover:shadow-md transition-shadow">
-                    <div className="mx-auto w-max mb-3 bg-blue-50 p-3 rounded-full">{f.icon}</div>
-                    <h4 className="font-bold text-sagar-blue mb-1">{f.title}</h4>
-                    <p className="text-xs text-gray-500">{f.desc}</p>
+              <div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl group border-4 border-white">
+                  <img 
+                    src="/assets/sagar_crane_maintenance.jpg" 
+                    alt="Sagar Electricals Field Work" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <p className="text-white text-sm font-bold flex items-center gap-2">
+                       <ShieldCheck className="text-sagar-yellow h-4 w-4" /> Professional Field Maintenance & Installation
+                    </p>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>

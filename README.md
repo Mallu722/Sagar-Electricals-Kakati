@@ -10,5 +10,5 @@ The company is known for its **24/7 availability**, allowing customers to get qu
 
 With a **5.0-star rating from customers**, the company continues to serve households and businesses by delivering trustworthy electrical services and maintaining long-term customer relationships.
 
-Frontend Website : https://sagar-electricals-kakati-5w3z.vercel.app/
+Frontend Website : https://sagar-electricals-kakati-iq5x.vercel.app/
 Backend Deployment : https://sagar-electricals-kakati-1.onrender.com 

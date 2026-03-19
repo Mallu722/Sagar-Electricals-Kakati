@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, Zap } from 'lucide-react';
+import { Phone, MapPin, Clock, Zap, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -23,6 +23,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold text-sagar-yellow">Our Services</h3>
             <ul className="text-gray-400 space-y-2 text-sm">
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/services/transformer-repair" className="hover:text-white transition-colors">Transformer Repair & Services</Link></li>
               <li><Link to="/services/high-voltage-cable-testing" className="hover:text-white transition-colors">High Voltage Cable Testing</Link></li>
               <li><Link to="/services/oil-filtration" className="hover:text-white transition-colors">Industrial Oil Filtration</Link></li>
@@ -41,9 +42,19 @@ const Footer = () => {
                   Plot No.50, Siddeshwar Nagar, Kakati, Belagavi, Karnataka 591113
                 </a>
               </li>
+              <li className="flex items-start gap-3">
+                <Phone className="h-5 w-5 text-sagar-yellow flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919739284211" className="hover:text-white transition-colors">+91 97392 84211</a>
+                  <a href="tel:+917829759202" className="hover:text-white transition-colors">+91 78297 59202</a>
+                  <a href="tel:+919448305184" className="hover:text-white transition-colors">+91 94483 05184</a>
+                </div>
+              </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-sagar-yellow flex-shrink-0" />
-                <span>+91 94483 05184</span>
+                <Mail className="h-5 w-5 text-sagar-yellow flex-shrink-0" />
+                <a href="mailto:sagarelectricals1999@gmail.com" className="hover:text-white transition-colors">
+                  sagarelectricals1999@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-sagar-yellow flex-shrink-0" />
@@ -54,8 +65,11 @@ const Footer = () => {
 
         </div>
         
-        <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Sagar Electricals. All rights reserved.</p>
+          <Link to="/dashboard" className="text-gray-600 hover:text-sagar-yellow transition-colors flex items-center gap-1.5 opacity-60 hover:opacity-100 italic">
+            <Zap className="h-3.5 w-3.5" /> Admin Login
+          </Link>
         </div>
       </div>
     </footer>

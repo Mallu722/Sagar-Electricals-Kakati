@@ -11,6 +11,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import ServiceRequest from './pages/ServiceRequest';
 import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
+import About from './pages/About';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,9 +20,12 @@ function ScrollToTop() {
 }
 
 function AppLayout() {
+  const { pathname } = useLocation();
+  const isDashboard = pathname.startsWith('/dashboard');
+
   return (
-    <div className="flex flex-col min-h-screen bg-sagar-light">
-      <Navbar />
+    <div className={`flex flex-col min-h-screen ${isDashboard ? 'bg-white' : 'bg-sagar-light'}`}>
+      {!isDashboard && <Navbar />}
       <ScrollToTop />
       <main className="flex-grow">
         <Routes>
@@ -30,12 +34,13 @@ function AppLayout() {
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/request" element={<ServiceRequest />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>
-      <Footer />
-      <FloatingWhatsApp />
-      <CallNowButton />
+      {!isDashboard && <Footer />}
+      {!isDashboard && <FloatingWhatsApp />}
+      {!isDashboard && <CallNowButton />}
     </div>
   );
 }
