@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, Clock, ThumbsUp, Wrench, CheckCircle, ShieldCheck, Download } from 'lucide-react';
+import { Shield, Clock, ThumbsUp, Wrench, CheckCircle, ShieldCheck, Download, MapPin, Phone, Mail, Zap, Settings, User } from 'lucide-react';
 
 const About = () => {
   return (
@@ -14,6 +13,124 @@ const About = () => {
           <p className="text-lg text-gray-600 leading-relaxed">
             Your trusted partner in safe, reliable, and professional electrical services in Belagavi.
           </p>
+        </div>
+
+        {/* Proprietor's Profile Section */}
+        <div className="mb-20">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            {/* Owner Photo & Quick Info */}
+            <div className="lg:col-span-4 space-y-6">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-sagar-yellow to-sagar-blue rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 min-h-[400px]">
+                  <img 
+                    src="/assets/owner.jpeg" 
+                    alt="Anil N. Deshpande" 
+                    className="w-full aspect-[4/5] object-cover"
+                    onError={(e) => { 
+                      e.target.onerror = null;
+                      e.target.src = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400&h=500'; // Professional fallback
+                    }}
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-sagar-blue/90 via-sagar-blue/40 to-transparent p-6 text-white">
+                    <p className="font-bold text-xl">Anil N. Deshpande</p>
+                    <p className="text-sagar-yellow text-sm font-semibold uppercase tracking-wider">Proprietor</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-sagar-light/50 backdrop-blur-sm rounded-2xl p-6 border border-sagar-blue/5">
+                <h3 className="text-sagar-blue font-bold mb-4 flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-sagar-yellow" /> Contact Details
+                </h3>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <p className="flex items-start gap-3">
+                    <MapPin className="h-4 w-4 mt-1 shrink-0 text-gray-400" />
+                    <span>Plot No. 50, Siddeshwar Nagar, Kakati, Belagavi 591113</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <Phone className="h-4 w-4 shrink-0 text-gray-400" />
+                    <span>9739284211 / 7829759202</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <Mail className="h-4 w-4 shrink-0 text-gray-400" />
+                    <span className="break-all">sagarelectricals1999@gmail.com</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Detailed Info & Workshop Photo */}
+            <div className="lg:col-span-8 space-y-8">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-sagar-blue/5 text-sagar-blue rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-sagar-blue/10">
+                  <ShieldCheck className="h-4 w-4 text-sagar-yellow" /> Govt. Class - I Electrical Contractor
+                </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-sagar-blue mb-6">
+                  Leadership & <span className="text-sagar-yellow">Experience</span>
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  Under the visionary leadership of <strong>Mr. Anil N. Deshpande</strong>, Sagar Electricals has established itself as a cornerstone of electrical engineering excellence in Karnataka. With decades of hands-on expertise, we provide specialized services that power industries and stabilize infrastructure.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 className="font-bold text-sagar-blue mb-3 flex items-center gap-2">
+                      <Zap className="h-5 w-5 text-sagar-yellow" /> Specialized Services
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Transformer Repair & Testing
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Oil Filtration & Dehydration
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Substation Power Equipment
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Supply & Calibration
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 className="font-bold text-sagar-blue mb-3 flex items-center gap-2">
+                      <Settings className="h-5 w-5 text-sagar-yellow" /> Infrastructure
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Air Circuit Breakers
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Industrial Cabling & Relays
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Precision Earthpits
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" /> Safety Audits & Certification
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Company Video/Photo Section */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group bg-black">
+                <video 
+                  controls 
+                  className="w-full h-[400px] object-cover"
+                  poster="/assets/sagar_crane_maintenance.jpg"
+                >
+                  <source src="/assets/company_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-4 left-4 bg-sagar-blue/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20">
+                  <Zap className="inline-block h-4 w-4 mr-2 text-sagar-yellow" /> Our Workshop in Action
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Story Section */}
