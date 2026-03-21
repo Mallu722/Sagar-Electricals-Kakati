@@ -21,7 +21,7 @@ export const servicesData = [
     title: 'Power Transformer Repair & Services',
     category: 'Transformer',
     tagline: 'Specialized servicing for high-capacity power transformers.',
-    description: 'High-capacity power transformers demand precision. Our team handles core and winding repairs, oil replacement, cooling system restoration, and full refurbishment for industrial and utility-grade power transformers across Karnataka.',
+    description: 'High-capacity power transformers demand precision. Our team handles core and winding repairs, oil replacement, cooling system restoration, and full refurbishment for industrial and utility-grade power transformers across India.',
     image: '/assets/sagar_crane_maintenance.jpg',
     iconName: 'Zap',
     pricing: [

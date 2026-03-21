@@ -125,7 +125,7 @@ const ServicesPage = () => {
             <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Need a custom quote?</h2>
             <p className="text-gray-300 mb-2 max-w-xl mx-auto">Our engineers will visit, assess, and give you a final price — you pay only after the job is done.</p>
             <p className="text-sagar-yellow font-bold mb-6">✓ No advance &nbsp; ✓ No hidden charges &nbsp; ✓ Pay after work</p>
-            <a href="tel:+919448305184"
+            <a href="tel:+917829759202"
               className="inline-block bg-sagar-yellow text-sagar-blue px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 transition-colors shadow-lg">
               Call for Free Assessment
             </a>

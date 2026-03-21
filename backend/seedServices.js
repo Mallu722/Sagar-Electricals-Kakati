@@ -49,7 +49,7 @@ const services = [
   },
   {
     title: 'High Voltage Cable Testing Services',
-    description: 'Advanced testing for high voltage cables to ensure safety and compliance with industrial standards across Karnataka.',
+    description: 'Advanced testing for high voltage cables to ensure safety and compliance with industrial standards across India.',
     iconName: 'Zap',
     category: 'Testing'
   },

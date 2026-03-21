@@ -39,14 +39,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-sagar-yellow flex-shrink-0 mt-0.5" />
                 <a href="https://maps.google.com/?q=Sagar+Electricals+Plot+No.50+Siddeshwar+Nagar+Kakati" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors cursor-pointer">
-                  Plot No.50, Siddeshwar Nagar, Kakati, Belagavi, Karnataka 591113
+                  Plot No.50, Siddeshwar Nagar, Kakati, Belagavi, India 591113
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-sagar-yellow flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+917829759202" className="hover:text-white transition-colors font-bold text-sagar-yellow">+91 78297 59202</a>
-                  <a href="tel:+919448305184" className="hover:text-white transition-colors">+91 94483 05184</a>
                   <a href="tel:+919739284211" className="hover:text-white transition-colors">+91 97392 84211</a>
                 </div>
               </li>

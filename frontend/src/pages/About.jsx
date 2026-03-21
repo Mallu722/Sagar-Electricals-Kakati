@@ -70,7 +70,7 @@ const About = () => {
                   Leadership & <span className="text-sagar-yellow">Experience</span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Under the visionary leadership of <strong>Mr. Anil N. Deshpande</strong>, Sagar Electricals has established itself as a cornerstone of electrical engineering excellence in Karnataka. With decades of hands-on expertise, we provide specialized services that power industries and stabilize infrastructure.
+                  Under the visionary leadership of <strong>Mr. Anil N. Deshpande</strong>, Sagar Electricals has established itself as a cornerstone of electrical engineering excellence in India. With decades of hands-on expertise, we provide specialized services that power industries and stabilize infrastructure.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">

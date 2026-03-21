@@ -245,7 +245,7 @@ const Home = () => {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-bold text-lg mb-1">Government Class-I Electrical Contractor</h4>
-                  <p className="text-gray-300 text-sm mb-4">Registered Office: 1305, Kakati, Belagavi, Karnataka-591113. We maintain the highest standards for critical electrical infrastructure.</p>
+                  <p className="text-gray-300 text-sm mb-4">Registered Office: 1305, Kakati, Belagavi, India-591113. We maintain the highest standards for critical electrical infrastructure.</p>
                   <a 
                     href="/assets/iso_certification_official.pdf" 
                     target="_blank" 

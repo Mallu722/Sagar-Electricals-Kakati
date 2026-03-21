@@ -90,7 +90,7 @@ const ServiceDetail = () => {
                 className="block w-full text-center bg-white text-sagar-blue font-bold py-3 rounded-xl hover:bg-yellow-50 transition-colors shadow-md">
                 Book Now
               </Link>
-              <a href="tel:+919448305184"
+              <a href="tel:+917829759202"
                 className="block w-full text-center mt-3 border-2 border-white/40 text-white font-bold py-3 rounded-xl hover:bg-white/10 transition-colors">
                 📞 Call Us Directly
               </a>
@@ -98,7 +98,7 @@ const ServiceDetail = () => {
 
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
               <h4 className="font-bold text-sagar-blue mb-3 text-sm">Why Choose Us?</h4>
-              {['Licensed & Certified Engineers', 'On-site Assessment', 'No Advance Payment', '24/7 Emergency Service', 'Pan-Karnataka Coverage'].map((item, i) => (
+              {['Licensed & Certified Engineers', 'On-site Assessment', 'No Advance Payment', '24/7 Emergency Service', 'Pan-India Coverage'].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 py-1.5 border-b border-gray-50 last:border-0">
                   <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span className="text-sm text-gray-600">{item}</span>

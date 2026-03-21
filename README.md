@@ -2,7 +2,7 @@
 
 ## About the Company
 
-**Sagar Electricals** is a professional electrical service provider located in **Siddeshwar Nagar, Kakati, Belagavi, Karnataka**. The company offers reliable and high-quality electrical installation, maintenance, and repair services for residential and commercial customers.
+**Sagar Electricals** is a professional electrical service provider located in **Siddeshwar Nagar, Kakati, Belagavi, India**. The company offers reliable and high-quality electrical installation, maintenance, and repair services for residential and commercial customers.
 
 With a focus on **safety, efficiency, and customer satisfaction**, Sagar Electricals provides a wide range of electrical solutions including **house wiring, electrical installations, fan and light fitting, switchboard repairs, and emergency electrical services**. The team consists of skilled and experienced electricians who ensure that every job is completed with precision and professionalism.
 

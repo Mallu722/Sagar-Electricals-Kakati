@@ -57,7 +57,7 @@ const ServiceRequest = () => {
     } catch (err) {
       console.error('Submission error:', err);
       const msg = err?.response?.data?.message || err?.response?.data?.error || '';
-      setError(msg || 'Failed to submit. Please try again or call us directly at +91 94483 05184.');
+      setError(msg || 'Failed to submit. Please try again or call us directly at +91 78297 59202.');
     } finally {
       setLoading(false);
     }
@@ -180,7 +180,7 @@ const ServiceRequest = () => {
 
             <p className="text-center text-xs text-gray-400">
               Or call us directly at{' '}
-              <a href="tel:+919448305184" className="font-bold text-sagar-blue hover:text-sagar-yellow">+91 94483 05184</a>
+              <a href="tel:+917829759202" className="font-bold text-sagar-blue hover:text-sagar-yellow">+91 78297 59202</a>
             </p>
           </form>
         </div>
