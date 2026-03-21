@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Zap, Wrench, CheckCircle, Smartphone, MapPin, ExternalLink, FileText, Download, Activity, Clock, Settings, Shield, ThumbsUp, Star, Quote } from 'lucide-react';
+import { ShieldCheck, Zap, Wrench, CheckCircle, Smartphone, MapPin, ExternalLink, FileText, Download, Activity, Clock, Settings, Shield, ThumbsUp, Star, Quote, QrCode } from 'lucide-react';
+import ShowcaseScanner from '../components/ShowcaseScanner';
 
 const Home = () => {
   return (
@@ -40,16 +41,16 @@ const Home = () => {
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                 Specialized transformer repair, high-voltage cable testing, and industrial oil filtration services —
                 Sagar Electricals delivers certified, safe solutions for power infrastructure.{' '}
-                <span className="font-bold text-white">Available 24/7 across Karnataka.</span>
+                <span className="font-bold text-white">Available 24/7 across all over India.</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link to="/request"
                   className="px-6 py-3 bg-sagar-yellow text-sagar-blue font-bold rounded-full text-sm hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl text-center">
                   Request Service
                 </Link>
-                <a href="tel:+919448305184"
+                <a href="tel:+917829759202"
                   className="px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/20 transition-all text-center">
-                  📞 +91 94483 05184
+                  📞 +91 78297 59202
                 </a>
               </div>
               {/* Trust pills */}
@@ -333,6 +334,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* QR Code Showcase */}
+      <ShowcaseScanner />
 
       {/* Reviews Section */}
       <section id="reviews" className="py-20 bg-gradient-to-b from-slate-50 to-blue-50">

@@ -34,16 +34,16 @@ const Contact = () => {
               </div>
             </a>
 
-            <a href="tel:+919448305184" className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow group cursor-pointer block">
+            <a href="tel:+917829759202" className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow group cursor-pointer block">
               <div className="w-12 h-12 bg-blue-50 text-sagar-blue rounded-xl flex items-center justify-center shrink-0 group-hover:bg-sagar-yellow group-hover:text-white transition-colors">
                 <Phone className="h-6 w-6" />
               </div>
               <div>
                 <h3 className="font-bold text-sagar-blue text-lg mb-1 group-hover:text-sagar-yellow transition-colors">Phone Numbers</h3>
                 <p className="text-gray-600 text-sm flex flex-col gap-1">
-                  <span className="font-bold text-sagar-blue">+91 94483 05184</span>
+                  <span className="font-bold text-sagar-blue">+91 78297 59202</span>
+                  <span>+91 94483 05184</span>
                   <span>+91 97392 84211</span>
-                  <span>+91 78297 59202</span>
                 </p>
                 <p className="text-gray-400 text-xs mt-1">Available 24/7 for emergencies</p>
               </div>

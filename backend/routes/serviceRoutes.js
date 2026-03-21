@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
 
         await transporter.sendMail({
           from: `"Sagar Electricals Website" <${process.env.EMAIL_USER}>`,
-          to: process.env.EMAIL_USER,
+          to: 'sagarelectricals1999@gmail.com',
           subject: `🔔 New Service Request — ${serviceType}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f8fafc; padding: 24px; border-radius: 12px;">
